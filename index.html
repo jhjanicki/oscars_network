@@ -1,0 +1,105 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+   <meta charset="utf-8">
+   <title>D3 Proportional treemap fixed height</title>
+   <meta name="description"
+      content="D3 Proportional treemap fixed height: vanilla JS">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+      <style>
+      body{
+         font-family: "Roboto Condensed", sans-serif;
+      }
+
+      #chart{
+         text-align: center;
+         width:90vw;
+         margin-left: auto;
+         margin-right: auto;
+      }
+      
+      text {
+         paint-order: stroke;
+         stroke: white;
+         stroke-width: 2px;
+         stroke-linecap: butt;
+         stroke-linejoin: miter;
+      }
+      .tooltip {
+         position: absolute;
+         top: -100px;
+         left: 100px;
+         -moz-border-radius: 5px;
+         border-radius: 5px;
+         width: 200px;
+         background: white;
+         opacity: .9;
+         color: black;
+         padding: 6px;
+         font-size: 14px;
+         z-index: 10;
+         border: 1px solid black;
+         line-height: 18px;
+    }
+
+      .category{
+         padding:2px;
+         border-radius: 5px;
+      }
+
+      .name{
+         font-size:16px;
+         font-weight: bold;
+      }
+      
+      circle:hover{
+         cursor: pointer;
+      }
+
+      .button{
+         display: inline-block;
+         text-align: center;
+         padding:5px;
+         width:160px;
+         border-radius: 20px;
+         background:"white";
+         color: black;
+      }
+
+      .button:hover{
+         cursor: pointer;
+      }
+
+      .inline{
+         display: inline-block;
+      }
+
+   </style>
+</head>
+
+<body>
+   <h2> Nominees across five Oscars categories in 2024, and their previous nominations in the same categories </h2>
+
+   <p class="inline"> Filter to see the 2024 nominees in the respective categories</p>
+   <div class="inline">
+      <div id="buttons"></div>
+
+   </div>
+   
+   <div id="chart"></div>
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/6.2.0/d3.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+   <script src="https://unpkg.com/textures@1.2.0/dist/textures.js"></script>
+   <script src="./tooltip.js"></script>
+   <script src="./data/nodes.js"></script>
+   <script src="./data/links.js"></script>
+   <script src="./main.js"></script>
+
+</body>
+
+</html>
