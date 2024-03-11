@@ -114,7 +114,7 @@ let links =  [
     "numWon": "NA",
     "person": "Da'Vine Joy Randolph",
     "category": "Best supporting actress",
-    "won": "NA",
+    "won": "won",
     "target": 8,
     "source": 65,
     "cat2023Ref":"Best supporting actress"
@@ -162,7 +162,7 @@ let links =  [
     "numWon": "NA",
     "person": "Christopher Nolan",
     "category": "Best director",
-    "won": "NA",
+    "won": "won",
     "target": 10,
     "source": 73,
     "cat2023Ref":"Best director"
@@ -174,7 +174,7 @@ let links =  [
     "numWon": "NA",
     "person": "Cillian Murphy",
     "category": "Best actor",
-    "won": "NA",
+    "won": "won",
     "target": 10,
     "source": 54,
     "cat2023Ref":"Best actor"
@@ -198,7 +198,7 @@ let links =  [
     "numWon": "NA",
     "person": "Robert Downey Jr",
     "category": "Best supporting actor",
-    "won": "NA",
+    "won": "won",
     "target": 10,
     "source": 68,
     "cat2023Ref":"Best supporting actor"
@@ -426,7 +426,7 @@ let links =  [
     "numWon": "NA",
     "person": "Emma Stone",
     "category": "Best actress",
-    "won": "NA",
+    "won": "won",
     "target": 23,
     "source": 60,
     "cat2023Ref":"Best actress"
