@@ -175,7 +175,6 @@ node.append("circle")
         if (d.type === "person") {
             d3.selectAll(`.source${d.id}`)
                 .each(function() {
-                    // console.log(d3.select(this).attr("d"))
                     const length = d3.select(this).node().getTotalLength();
                     d3.select(this).attr("stroke-dasharray", length + " " + length)
                         .attr("stroke-dashoffset", length)
@@ -186,6 +185,7 @@ node.append("circle")
                 })
                 .attr("stroke", "black")
         } else {
+            console.log(d.id)
             d3.selectAll(`.target${d.id}`)
                 .each(function() {
                     const length = d3.select(this).node().getTotalLength();
@@ -197,6 +197,15 @@ node.append("circle")
                         .duration(200)
                 })
                 .attr("stroke", "black")
+
+                const ids = links
+                .filter(link => link.target.id === d.id)
+                .map(link => link.source.id);
+
+              ids.forEach(id => {
+                setTimeout(() => d3.selectAll(`.node${id}`).attr("stroke", "black"), 200);
+              });
+
         }
     })
     .on("mouseout", (e, d) => {
@@ -256,7 +265,6 @@ function toggle(id) {
         d3.select(`#${idCleaned}`).style("background", "white");
         activeArray = activeArray.filter(d => d !== id)
         inactiveArray.push(id)
-        // console.log(activeArray)
         d3.selectAll(`.${idCleaned}`).style("opacity", 0)
         // remove other links and films
         // look for the cat in idsPerCat, remove all the ids,
@@ -304,7 +312,6 @@ function toggle(id) {
         activeArray.push(id)
         inactiveArray = inactiveArray.filter(d => d !== id)
 
-        // console.log(activeArray)
         d3.selectAll(`.${idCleaned}`).style("opacity", 1)
 
         idsPerCat.forEach(cat => {
