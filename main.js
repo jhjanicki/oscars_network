@@ -265,14 +265,14 @@ function toggle(id) {
         d3.select(`#${idCleaned}`).style("background", "white");
         activeArray = activeArray.filter(d => d !== id)
         inactiveArray.push(id)
-        d3.selectAll(`.${idCleaned}`).style("opacity", 0)
+        d3.selectAll(`.${idCleaned}`).style("opacity", 0).style("visibility","hidden")
         // remove other links and films
         // look for the cat in idsPerCat, remove all the ids,
         idsPerCat.forEach(cat => {
             if (cat.category === id) {
                 cat.ids.forEach(filmID => {
-                    d3.selectAll(`.film_${filmID}`).style("opacity", 0)
-                    d3.selectAll(`.filmText_${filmID}`).style("opacity", 0)
+                    d3.selectAll(`.film_${filmID}`).style("opacity", 0).style("visibility","hidden")
+                    d3.selectAll(`.filmText_${filmID}`).style("opacity", 0).style("visibility","hidden")
                 })
             }
         })
@@ -281,8 +281,8 @@ function toggle(id) {
         idsPerCat.forEach(cat => {
             if (activeArray.includes(cat.category)) {
                 cat.ids.forEach(filmID => {
-                    d3.selectAll(`.film_${filmID}`).style("opacity", 1)
-                    d3.selectAll(`.filmText_${filmID}`).style("opacity", 1)
+                    d3.selectAll(`.film_${filmID}`).style("opacity", 1).style("visibility","visible")
+                    d3.selectAll(`.filmText_${filmID}`).style("opacity", 1).style("visibility","visible")
                 })
             }
         })
@@ -292,19 +292,19 @@ function toggle(id) {
 
         inactiveArray.forEach(cat => {
             let catCleaned = cat.replaceAll(" ", "_")
-            d3.selectAll(`.ref-${catCleaned}`).style("opacity", 0)
-            d3.selectAll(`.refText-${catCleaned}`).style("opacity", 0)
-            d3.selectAll(`.refLink-${catCleaned}`).style("opacity", 0)
+            d3.selectAll(`.ref-${catCleaned}`).style("opacity", 0).style("visibility","hidden")
+            d3.selectAll(`.refText-${catCleaned}`).style("opacity", 0).style("visibility","hidden")
+            d3.selectAll(`.refLink-${catCleaned}`).style("opacity", 0).style("visibility","hidden")
         })
 
         // add back those where at least one of the cats are active
         activeArray.forEach(cat => {
             let catCleaned = cat.replaceAll(" ", "_")
-            d3.selectAll(`.ref-${catCleaned}`).style("opacity", 1)
-            d3.selectAll(`.refText-${catCleaned}`).style("opacity", 1)
-            d3.selectAll(`.refLink-${catCleaned}`).style("opacity", 1)
+            d3.selectAll(`.ref-${catCleaned}`).style("opacity", 1).style("visibility","visible")
+            d3.selectAll(`.refText-${catCleaned}`).style("opacity", 1).style("visibility","visible")
+            d3.selectAll(`.refLink-${catCleaned}`).style("opacity", 1).style("visibility","visible")
         })
-        d3.selectAll(`.link-${idCleaned}`).style("opacity", 0)
+        d3.selectAll(`.link-${idCleaned}`).style("opacity", 0).style("visibility","hidden")
 
 
     } else { // add
@@ -312,30 +312,30 @@ function toggle(id) {
         activeArray.push(id)
         inactiveArray = inactiveArray.filter(d => d !== id)
 
-        d3.selectAll(`.${idCleaned}`).style("opacity", 1)
+        d3.selectAll(`.${idCleaned}`).style("opacity", 1).style("visibility","visible")
 
         idsPerCat.forEach(cat => {
             if (cat.category === id) {
                 cat.ids.forEach(filmID => {
-                    d3.selectAll(`.film_${filmID}`).style("opacity", 1)
-                    d3.selectAll(`.filmText_${filmID}`).style("opacity", 1)
+                    d3.selectAll(`.film_${filmID}`).style("opacity", 1).style("visibility","visible")
+                    d3.selectAll(`.filmText_${filmID}`).style("opacity", 1).style("visibility","visible")
                 })
             }
         })
 
         inactiveArray.forEach(cat => {
             let catCleaned = cat.replaceAll(" ", "_")
-            d3.selectAll(`.ref-${catCleaned}`).style("opacity", 0)
-            d3.selectAll(`.refText-${catCleaned}`).style("opacity", 0)
-            d3.selectAll(`.refLink-${catCleaned}`).style("opacity", 0)
+            d3.selectAll(`.ref-${catCleaned}`).style("opacity", 0).style("visibility","hidden")
+            d3.selectAll(`.refText-${catCleaned}`).style("opacity", 0).style("visibility","hidden")
+            d3.selectAll(`.refLink-${catCleaned}`).style("opacity", 0).style("visibility","hidden")
         })
 
         // add back those where at least one of the cats are active
         activeArray.forEach(cat => {
             let catCleaned = cat.replaceAll(" ", "_")
-            d3.selectAll(`.ref-${catCleaned}`).style("opacity", 1)
-            d3.selectAll(`.refText-${catCleaned}`).style("opacity", 1)
-            d3.selectAll(`.refLink-${catCleaned}`).style("opacity", 1)
+            d3.selectAll(`.ref-${catCleaned}`).style("opacity", 1).style("visibility","visible")
+            d3.selectAll(`.refText-${catCleaned}`).style("opacity", 1).style("visibility","visible")
+            d3.selectAll(`.refLink-${catCleaned}`).style("opacity", 1).style("visibility","visible")
         })
     }
 }
