@@ -10,8 +10,8 @@ $(window).resize(function() {
         return;
     }
 });
-const width = windowWidth - 100;
-const height = windowHeight;
+const width = windowWidth;
+const height = 850;
 
 let tooltip = floatingTooltip('gates_tooltip', 240, 10);
 
@@ -78,7 +78,7 @@ const simulation = d3.forceSimulation(nodes)
 
 const divButtons = d3.select("#buttons")
     .append("div")
-    .attr("width", height)
+    .attr("width", width)
 
 divButtons.selectAll("p").data(categories).join("p").attr("class", "button").attr("id", d => d.replaceAll(" ", "_")).html(d => d)
     .style("border", d => `1px solid ${cat2023(d)}`).style("background", d => cat2023(d))
@@ -161,12 +161,12 @@ node.append("circle")
     .on("mouseover", (e, d) => {
         let content;
         if (d.type === "person") {
-            content = `<span> <b>${d.person}</b>${d.won==="yes"?" (2024 winner)":""}</span> <br> 
-          <span class="category" style = "background-color:${cat2023(d.category2023)}">${d.category2023}</span> <br> 
-          ${d.totalWon} win${d.totalWon>1?"s":""} out of ${d.totalNoms} Oscars nomination${d.totalNoms>1?"s":""}. <br>
+            content = `<span> <b>${d.person}</b>${d.won==="yes"?" (2024 winner)":""}</span> <br>
+          <span class="category" style = "background-color:${cat2023(d.category2023)}">${d.category2023}</span> <br>
+          ${d.totalWon} win${d.totalWon>1?"s":""} out of ${d.totalNoms}  nomination${d.totalNoms>1?"s":""} overall. <br>
           ${d.totalNoms2023} nomination${d.totalNoms2023>1?"s":""} in 2024 in the following: ${d.totalNoms2023Cats.toString()}`;
         } else {
-            content = `<span> <b>${d.person}</b>  </span>${d.Is2023==="yes"?"(2024)":""} <br> 
+            content = `<span> <b>${d.person}</b>  </span>${d.Is2023==="yes"?"(2024)":""} <br>
           ${d.totalWon} win${d.totalWon>1?"s":""} out of ${d.totalNom} Oscars nomination${d.totalNom>1?"s":""}`
         }
         tooltip.showTooltip(content, e);
@@ -259,7 +259,7 @@ function toggle(id) {
         // console.log(activeArray)
         d3.selectAll(`.${idCleaned}`).style("opacity", 0)
         // remove other links and films
-        // look for the cat in idsPerCat, remove all the ids, 
+        // look for the cat in idsPerCat, remove all the ids,
         idsPerCat.forEach(cat => {
             if (cat.category === id) {
                 cat.ids.forEach(filmID => {
@@ -330,8 +330,5 @@ function toggle(id) {
             d3.selectAll(`.refText-${catCleaned}`).style("opacity", 1)
             d3.selectAll(`.refLink-${catCleaned}`).style("opacity", 1)
         })
-
-
     }
-
 }
