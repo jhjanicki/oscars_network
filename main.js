@@ -10,7 +10,7 @@ $(window).resize(function() {
         return;
     }
 });
-const width = windowWidth;
+const width = windowWidth-100;
 const height = 850;
 
 let tooltip = floatingTooltip('gates_tooltip', 240, 10);
@@ -226,8 +226,8 @@ node.append("text")
     })
     .attr("x", 8)
     .attr("y", "1em")
-    .attr("fill", d => d.Is2023 === "yes" ? "black" : "#636363")
-    .style("font-weight", d => d.Is2023 === "yes" ? 700 : 400)
+    .attr("fill", d => d.Is2023 === "yes" ? "black" : "#969696")
+    .style("font-weight", d => d.type === "person" ? 700 : 400)
     .text(d => d.person)
     .clone(true).lower()
     .attr("fill", "none")
