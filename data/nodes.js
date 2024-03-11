@@ -45,10 +45,10 @@ let nodes = [
     "Is2023": "yes",
     "id": 54,
     "totalNoms":1,
-    "totalWon":0,
+    "totalWon":1,
     "totalNoms2023":1,
     "totalNoms2023Cats": ["Best actor"],
-    "totalWon2023": 0,
+    "totalWon2023": 1,
     "won":"yes"
   },
   {
@@ -123,10 +123,10 @@ let nodes = [
     "Is2023": "yes",
     "id": 60,
     "totalNoms":5,
-    "totalWon":1,
+    "totalWon":2,
     "totalNoms2023":2,
     "totalNoms2023Cats": ["Best actress", "Best picture"],
-    "totalWon2023": 0,
+    "totalWon2023": 1,
     "won":"yes"
   },
   {
@@ -140,7 +140,7 @@ let nodes = [
     "totalNoms2023":1,
     "totalNoms2023Cats": ["Best supporting actress"],
     "totalWon2023": 0,
-    "won":"yes"
+    "won":"no"
   },
   {
     "person": "Danielle Brooks",
@@ -188,11 +188,11 @@ let nodes = [
     "Is2023": "yes",
     "id": 65,
     "totalNoms":1,
-    "totalWon":0,
+    "totalWon":1,
     "totalNoms2023":1,
     "totalNoms2023Cats": ["Best supporting actress"],
-    "totalWon2023": 0,
-    "won":"no"
+    "totalWon2023": 1,
+    "won":"yes"
   },
   {
     "person": "Sterling K. Brown",
@@ -227,11 +227,11 @@ let nodes = [
     "Is2023": "yes",
     "id": 68,
     "totalNoms":3,
-    "totalWon":0,
+    "totalWon":1,
     "totalNoms2023":1,
     "totalNoms2023Cats": ["Best supporting actor"],
-    "totalWon2023": 0,
-    "won":"no"
+    "totalWon2023": 1,
+    "won":"yes"
   },
   {
     "person": "Ryan Gosling",
@@ -244,7 +244,7 @@ let nodes = [
     "totalNoms2023":1,
     "totalNoms2023Cats": ["Best supporting actor"],
     "totalWon2023": 0,
-    "won":"yes"
+    "won":"no"
   },
   {
     "person": "Mark Ruffalo",
@@ -292,10 +292,10 @@ let nodes = [
     "Is2023": "yes",
     "id": 73,
     "totalNoms":8,
-    "totalWon":0,
+    "totalWon":2,
     "totalNoms2023":3,
     "totalNoms2023Cats": ["Best director","Best picture","Best adapted screenplay"],
-    "totalWon2023": 0,
+    "totalWon2023": 2,
     "won":"yes"
   },
   {
@@ -402,7 +402,7 @@ let nodes = [
     "id": 8,
     "cat2023Ref": ["Best actor","Best supporting actress"],
     "totalNom": 5,
-    "totalWon": 0
+    "totalWon": 1
   },
   {
     "person": "American Fiction",
@@ -412,7 +412,7 @@ let nodes = [
     "id": 9,
     "cat2023Ref": ["Best actor","Best supporting actor"],
     "totalNom": 5,
-    "totalWon": 0
+    "totalWon": 1
   },
   {
     "person": "Oppenheimer",
@@ -422,7 +422,7 @@ let nodes = [
     "id": 10,
     "cat2023Ref": ["Best actor","Best supporting actor","Best supporting actress","Best director"],
     "totalNom": 13,
-    "totalWon": 0
+    "totalWon": 7
   },
   {
     "person": "The Grifters",
@@ -492,7 +492,7 @@ let nodes = [
     "id": 17,
     "cat2023Ref": ["Best actress","Best director"],
     "totalNom": 5,
-    "totalWon": 0
+    "totalWon": 1
   },
   {
     "person": "An Education",
@@ -552,7 +552,7 @@ let nodes = [
     "id": 23,
     "cat2023Ref": ["Best actress","Best supporting actor","Best director"],
     "totalNom": 11,
-    "totalWon": 0
+    "totalWon": 4
   },
   {
     "person": "The Color Purple",
@@ -572,7 +572,7 @@ let nodes = [
     "id": 25,
     "cat2023Ref": ["Best supporting actress","Best supporting actor"],
     "totalNom": 8,
-    "totalWon": 0
+    "totalWon": 1
   },
   {
     "person": "Taxi Driver",
@@ -722,7 +722,7 @@ let nodes = [
     "id": 40,
     "cat2023Ref": ["Best director"],
     "totalNom": 5,
-    "totalWon": 0
+    "totalWon": 2
   },
   {
     "person": "Dunkirk",
